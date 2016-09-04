@@ -26,6 +26,12 @@ public class ExpenseController {
 	public Expense createExpense(@RequestBody Expense expense) {
 		return repository.save(expense);
 	}
+	
+	@RequestMapping(value = "/resetDB")
+	public String resetDB(){
+		repository.deleteAll();
+		return "DataBase Got Resetted!";
+	}
 
 
 
