@@ -3,39 +3,32 @@
 	<h4>Settings</h4>
 	</p>
 	<hr />
-
-
-	<h3>Please Reset For Each And Every Month!</h3>
+	</i><h4>Please Reset For {{monthName()}} Month Expenses</h4><br/><h6>The Below Reset Button Will be Enable from Day <b>{{from()}}</b> to
+		<b>{{from()+9}}</b> for every Month otherwise After 10th Automatically Will Reset Your Monthly Expenses</h6>
+	<br/><br/>	
 	
-<br/>
+	
 
-	<!-- <div style="width: 30%" class="alert alert-success fade in"
-		ng-if="msg == 'SUCCESSFULLY_RESETTED' ">
-		<a class="close" data-dismiss="alert" aria-label="close">&times;</a> <strong>{{msg}}</strong>
-	</div>
-
-	<div style="width: 30%" class="alert alert-danger fade in"
-		ng-if=" msg == 'ERROR_WHILE_RESETTING' ">
-		<a class="close" data-dismiss="alert" aria-label="close">&times;</a> <strong>{{msg}}</strong>
-	</div> -->
+	<br />
 
 	<div class="row" ng-if=" msg != null ">
 		<div class="col-sm-6 col-md-6" ng-if="msg == 'SUCCESSFULLY_RESETTED' ">
 			<div class="alert alert-success">
 				<button type="button" class="close" data-dismiss="alert"
 					aria-hidden="true">×</button>
-				<span class="glyphicon glyphicon-ok"></span> <strong>{{msg}}</strong>
+				<span class="glyphicon glyphicon-ok"></span> <strong><b>{{monthName()}}</b>-Month-Expenses
+					: {{msg}}</strong>
 				<hr class="message-inner-separator">
-				<p>All Expenses Got Re setted Successfully!</p>
+				<p>All Expenses Got Re-Setted Successfully!</p>
 			</div>
 		</div>
 
-		<div class="col-sm-6 col-md-6"
-			ng-if=" msg == 'ERROR_WHILE_RESETTING' ">
+		<div class="col-sm-6 col-md-6" ng-if=" msg == 'ERROR_WHILE_RESETTING' ">
 			<div class="alert alert-danger">
 				<button type="button" class="close" data-dismiss="alert"
 					aria-hidden="true">×</button>
-				<span class="glyphicon glyphicon-hand-right"></span> <strong>{{msg}}</strong>
+				<span class="glyphicon glyphicon-hand-right"></span> <strong>{{monthName()}}-Month-Expenses
+					: {{msg}}</strong>
 				<hr class="message-inner-separator">
 				<p>Error While Reset The Monthly Expenses!</p>
 			</div>
@@ -44,7 +37,34 @@
 
 
 	<br />
-	<button type="button" class="btn btn-danger" ng-click="showAlert();">Reset
-		The Monthly Expenses</button>
+
+
+	<div class="container" ng-if="enable();">
+		<button type="button" class="btn btn-danger btn-lg"
+			data-toggle="modal" data-target="#myModal">Reset The
+			{{monthName()}} Monthly Expenses</button>
+
+		<div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Reset The Expenses</h4>
+					</div>
+					<div class="modal-body">
+						<p>
+							If You click on Confirm All the <b>{{monthName()}}</b> Expenses
+							Will be removed
+						</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-info" ng-click="showAlert();"
+							data-dismiss="modal">Confirm</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 </div>

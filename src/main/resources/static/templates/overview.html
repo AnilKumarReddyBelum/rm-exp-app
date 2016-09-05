@@ -4,6 +4,23 @@
 		<h4>Create An Expense Here</h4>
 		</p>
 		<hr />
+		
+	<div class="row" ng-if=" saveMsg() != null ">
+		<div class="col-sm-6 col-md-6" ng-if="saveMsg() == 'SUCCESS' ">
+			<div class="alert alert-success">
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+				<span class="glyphicon glyphicon-ok"></span> <strong>New Expense Added Successfully!</strong>
+			</div>
+		</div>
+		<div class="col-sm-6 col-md-6" ng-if=" saveMsg() == 'ERROR' ">
+			<div class="alert alert-danger">
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+				<span class="glyphicon glyphicon-hand-right"></span> <strong>Oops! Error Occured While Saving!</strong>
+			</div>
+		</div>
+	</div>
+		
+		
 		<form class="form-horizontal" role="form"
 			ng-submit="sbmitExpenseRecord();">
 
@@ -30,14 +47,19 @@
 
 			<div class="form-group">
 				<div class="col-sm-offset-2 col-sm-5">
-					<button type="submit" class="btn btn-primary">Create An
+					<button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Create An
 						Expense</button>
 					<button type="reset" class="btn btn-danger">Reset</button>
 				</div>
 			</div>
-
 		</form>
 	</div>
+
+	
+
+
+
+
 	<div>
 		<table class="table table-bordered" style="width: 300px;">
 			<thead>
