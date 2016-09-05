@@ -5,6 +5,8 @@ roomExpApp.controller("expManagementController", function($scope, $http) {
 	var anilTotal = 0;
 	var total = 0;
 	$scope.expenses = [];
+	var saveMsg = null;
+	var owner = null;
 	$scope.form = {
 		id : -1,
 		owner : "",
@@ -46,13 +48,22 @@ roomExpApp.controller("expManagementController", function($scope, $http) {
 
 	// After success operation
 	function _success(response) {
+		saveMsg = 'SUCCESS';
+		console.log($scope.saveMsg);
 		_refreshPageData();
 		_clearForm();
 	}
 
 	// Form error
 	function _error(response) {
+		saveMsg = 'ERROR';
 		console.log(response.statusText);
+	}
+	
+	
+	$scope.saveMsg = function(){
+		console.log(saveMsg);
+		return saveMsg;
 	}
 
 	// Clear the form
@@ -97,7 +108,7 @@ roomExpApp.controller("expManagementController", function($scope, $http) {
 			return anilTotal - chanduTotal;
 		} else if (anilTotal == chanduTotal) {
 			return 0;
-		}else {
+		} else {
 			return anilTotal - chanduTotal;
 		}
 	}
