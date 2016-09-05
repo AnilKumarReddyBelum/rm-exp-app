@@ -2,8 +2,8 @@ package com.ac.rmexpapp.model;
 
 public enum DeleteStaus {
 
-	SUCCESSFULLY_DELETED(202, "Success"), 
-	ERROR_WHILE_DELETING(404, "Error");
+	SUCCESSFULLY_RESETTED(202, "Success"), 
+	ERROR_WHILE_RESETTING(404, "Error");
 
 	public Integer getCode() {
 		return code;
