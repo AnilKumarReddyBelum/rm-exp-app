@@ -6,25 +6,44 @@
 
 
 	<h3>Please Reset For Each And Every Month!</h3>
+	
+<br/>
 
-	<div style="width: 30%" class="alert alert-success fade in"
+	<!-- <div style="width: 30%" class="alert alert-success fade in"
 		ng-if="msg == 'SUCCESSFULLY_RESETTED' ">
-		<a class="close" data-dismiss="alert" aria-label="close">&times;</a>
-		<strong>{{msg}}</strong>
+		<a class="close" data-dismiss="alert" aria-label="close">&times;</a> <strong>{{msg}}</strong>
 	</div>
 
 	<div style="width: 30%" class="alert alert-danger fade in"
 		ng-if=" msg == 'ERROR_WHILE_RESETTING' ">
-		<a class="close" data-dismiss="alert" aria-label="close">&times;</a>
-		<strong>{{msg}}</strong>
+		<a class="close" data-dismiss="alert" aria-label="close">&times;</a> <strong>{{msg}}</strong>
+	</div> -->
+
+	<div class="row" ng-if=" msg != null ">
+		<div class="col-sm-6 col-md-6" ng-if="msg == 'SUCCESSFULLY_RESETTED' ">
+			<div class="alert alert-success">
+				<button type="button" class="close" data-dismiss="alert"
+					aria-hidden="true">×</button>
+				<span class="glyphicon glyphicon-ok"></span> <strong>{{msg}}</strong>
+				<hr class="message-inner-separator">
+				<p>All Expenses Got Re setted Successfully!</p>
+			</div>
+		</div>
+
+		<div class="col-sm-6 col-md-6"
+			ng-if=" msg == 'ERROR_WHILE_RESETTING' ">
+			<div class="alert alert-danger">
+				<button type="button" class="close" data-dismiss="alert"
+					aria-hidden="true">×</button>
+				<span class="glyphicon glyphicon-hand-right"></span> <strong>{{msg}}</strong>
+				<hr class="message-inner-separator">
+				<p>Error While Reset The Monthly Expenses!</p>
+			</div>
+		</div>
 	</div>
 
 
-
-
-	<BR /> <BR />
-
-
+	<br />
 	<button type="button" class="btn btn-danger" ng-click="showAlert();">Reset
 		The Monthly Expenses</button>
 
