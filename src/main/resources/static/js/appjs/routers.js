@@ -6,7 +6,7 @@ roomExpApp.config([ '$routeProvider', function($routeProvider) {
 	}).when('/authors', {
 		templateUrl : '/templates/authors.html'
 	}).when('/settings', {
-		templateUrl : '/templates/settings.html'
+		templateUrl : '/templates/settings-1.html'
 	}).otherwise({
 		redirectTo : '/overview'
 	});
