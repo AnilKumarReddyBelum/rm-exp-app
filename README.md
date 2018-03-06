@@ -12,3 +12,4 @@ We are using the below technologies to develop this applicaiton.
   <li>AngularJS</li>
   <li>Bootstrap</li>
 </ul>
+http://javasampleapproach.com/spring-framework/spring-cloud/configure-springboot-zuul-routing-filtering
