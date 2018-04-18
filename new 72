@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang='en' xmlns:th='http://www.thymeleaf.org' xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset='utf-8'/>
+  <meta name='viewport' content='width=device-width, initial-scale=1'/>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css'/>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js'></script>
+  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js'></script>
+</head>
+<body>
+ 
+<div class='container'>
+  <div class='card'>
+    <div class='card-header'>
+		Dear <strong th:inline=\'text\'>[[${userEmail}]]</strong>
+        <p>Below are the request details.</p>
+    </div>
+    <div class='card-body'>
+      <table class='table table-bordered' wi>
+    <tbody>
+     
+          <tr><td>Business Name</td><td><strong th:inline=\'text\'>[[${bn}]]</strong></td></tr>
+          <tr><td>Sub Business Name</td><td><strong th:inline=\'text\'>[[${sbn}]]</strong></td></tr>
+          <tr><td>Role Requested</td><td><strong th:inline=\'text\'>[[${role}]]</strong></td></tr>
+		  <tr><td>Approver Email</td><td><strong th:inline=\'text\'>[[${approverEmail}]]</strong></td></tr>
+		  <tr><td>Comments</td><td><strong th:inline=\'text\'>[[${comments}]]</strong></td></tr>
+      
+    </tbody>
+  </table>
+    </div> 
+		<div class='card-footer'>
+
+			
+				http://bankingadmin-test.us-east-2.elasticbeanstalk.com/<strong th:inline=\'text\'>[[${comments}]]</strong><br/>
+			
+				You will receive an email once all approvals are obtained.</div>
+  </div>
+</div>
+
+</body>
+</html>
