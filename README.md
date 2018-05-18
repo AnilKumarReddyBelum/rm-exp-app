@@ -13,3 +13,4 @@ We are using the below technologies to develop this applicaiton.
   <li>Bootstrap</li>
 </ul>
 http://javasampleapproach.com/spring-framework/spring-cloud/configure-springboot-zuul-routing-filtering
+https://github.com/adamzareba/company-structure-spring-security-oauth2-authorities
