@@ -1,0 +1,51 @@
+{
+    "id": 9,
+    "name": "SIGN-UP-REQUEST-USER-TEMPLATE",
+    "subject": "NO ACTION REQUIRED : Your access request XXXXXX has been submitted for approval.",
+    "content": "<html> <body> <table> <tr> <td> <p>Dear $emailId</p> <p>Below are the request details.</p> </td> </tr> <tr> <td bgcolor='lightblue' style='padding: 40px 30px 40px 30px;'> <table> <tr> <td>Business Name</td> <td>$businessName</td> </tr> <tr> <td>SubBusiness Name</td> <td>$subBusinessName</td> </tr> <tr> <td>Role</td> <td>$userRole</td> </tr> <tr> <td>Approver Email Id</td> <td>$approveOrRejectBy</td> </tr> <tr> <td>Requestor Comments</td> <td>$requestorComments</td> </tr> </table> </td> </tr> <tr> <td bgcolor='#eaeaea' style='padding: 30px 30px 30px 30px;'>To check status of this request please <a href='http://gsyw-gfits-ui.herokuapp.com/register/$loginRequestId'>Click</a> here to go. <br /> You will receive an email once all approvals are obtained. </td> </tr> </table> </body> </html>",
+    "createdBy": "Anil",
+    "createdOn": "2018-04-21T09:38:28.343+0000",
+    "updatedBy": "Anil",
+    "updatedOn": "2018-04-21T09:38:28.343+0000"
+  },
+  {
+    "id": 10,
+    "name": "SIGN-UP-REQUEST-APPROVER-TEMPLATE",
+    "subject": "ACTION REQUIRED : Access request XXXXXX has been submitted for approval.",
+    "content": "<html> <body> <table> <tr> <td> <p>Dear $approveOrRejectBy</p> <p>Below are the request details to be approve.</p> </td> </tr> <tr> <td bgcolor='lightblue' style='padding: 40px 30px 40px 30px;'> <table> <tr> <td>Business Name</td> <td>$businessName</td> </tr> <tr> <td>SubBusiness Name</td> <td>$subBusinessName</td> </tr> <tr> <td>User Requested Role</td> <td>$userRole</td> </tr> <tr> <td>User Email Id</td> <td>$userName</td> </tr> <tr> <td>Requestor Comments</td> <td>$requestorComments</td> </tr> </table> </td> </tr> <tr> <td bgcolor='#eaeaea' style='padding: 30px 30px 30px 30px;'>To approve this please <a href='http://gsyw-gfits-ui.herokuapp.com/my-approvals/approve-user-requests/$loginRequestId'>Click</a> here.</td> </tr> </table> </body> </html>",
+    "createdBy": "Anil",
+    "createdOn": "2018-04-21T09:38:30.937+0000",
+    "updatedBy": "Anil",
+    "updatedOn": "2018-04-21T09:38:30.937+0000"
+  },
+  {
+    "id": 11,
+    "name": "SIGN-UP-REQUEST-APPROVE-REJECT-TEMPLATE-FOR-USER",
+    "subject": "NO ACTION REQUIRED : Your access request XXXXXX has been submitted and status of your request is  ",
+    "content": "<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'> <html xmlns:th='http://www.thymeleaf.org' xmlns='http://www.w3.org/1999/xhtml'> <head> <title>NO ACTION REQUIRED : Your access request XXXXXXXX has been submitted for approval.</title> <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' /> <meta name='viewport' content='width=device-width, initial-scale=1.0' /> <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css' /> <!-- use the font --> <style> body { font-family: 'Roboto', sans-serif; font-size: 48px; } </style> </head> <body style='margin: 0; padding: 0;'> <table align='center' border='0' cellpadding='0' cellspacing='0' width='600' style='border-collapse: collapse;'> <tr> <td bgcolor='#eaeaea' style='padding: 40px 30px 40px 30px;'> <p> Dear $userName </p> <p> Your SignUpRequest status is $requestStatus </p> </td> </tr> <tr> <td bgcolor='lightblue' style='padding: 40px 30px 40px 30px;'> <table> <tr> <td>Business Name</td> <td>$businessName</td> </tr> <tr> <td>SubBusiness Name</td> <td>$subBusinessName</td> </tr> <tr> <td>Role</td> <td>$userRole</td> </tr> <tr> <td>Approver Email Id</td> <td>$approveOrRejectBy</td> </tr> <tr> <td>Requestor Comments</td> <td>$approverComments</td> </tr> </table> </td> </tr> <tr> <td bgcolor='#eaeaea' style='padding: 30px 30px 30px 30px;'> To check status of this request please <a href='http://gsyw-gfits-ui.herokuapp.com/register/$loginRequestId'>Click</a> here. </td> </tr> </table> </body> </html>",
+    "createdBy": "Anil",
+    "createdOn": "2018-04-21T09:38:32.710+0000",
+    "updatedBy": "Anil",
+    "updatedOn": "2018-04-21T09:38:32.710+0000"
+  },
+    {
+    "id": 12,
+    "name": "SIGN-UP-REQUEST-APPROVE-REJECT-TEMPLATE-FOR-APPROVER",
+    "subject": "NO ACTION REQUIRED : User SignUp request XXXXXX has been ",
+    "content": "<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'> <html xmlns:th='http://www.thymeleaf.org' xmlns='http://www.w3.org/1999/xhtml'> <head> <title>NO ACTION REQUIRED : Your access request XXXXXXXX has been submitted for approval.</title> <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' /> <meta name='viewport' content='width=device-width, initial-scale=1.0' /> <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css' /> <!-- use the font --> <style> body { font-family: 'Roboto', sans-serif; font-size: 48px; } </style> </head> <body style='margin: 0; padding: 0;'> <table align='center' border='0' cellpadding='0' cellspacing='0' width='600' style='border-collapse: collapse;'> <tr> <td bgcolor='#eaeaea' style='padding: 40px 30px 40px 30px;'> <p> Dear $approveOrRejectBy </p> <p> SignUpRequest status is $requestStatus </p> </td> </tr> <tr> <td bgcolor='lightblue' style='padding: 40px 30px 40px 30px;'> <table> <tr> <td>Business Name</td> <td>$businessName</td> </tr> <tr> <td>SubBusiness Name</td> <td>$subBusinessName</td> </tr> <tr> <td>Role</td> <td>$userRole</td> </tr> <tr> <td>Requestor Email Id</td> <td>$userName</td> </tr> <tr> <td>Requestor Comments</td> <td>$approverComments</td> </tr> </table> </td> </tr> <tr> <td bgcolor='#eaeaea' style='padding: 30px 30px 30px 30px;'>To check status of this request please <a href='http://gsyw-gfits-ui.herokuapp.com/my-approvals/approve-user-requests/$loginRequestId'>Click</a> here.</td> </tr> </table> </body> </html>",
+    "createdBy": "Anil",
+    "createdOn": "2018-04-21T09:38:34.400+0000",
+    "updatedBy": "Anil",
+    "updatedOn": "2018-04-21T09:38:34.400+0000"
+  },
+    {
+    "id": 14,
+    "name": "BANK-ACCOUNT-CLOSING-REQUEST-FROM-REQUESTOR",
+    "subject": "NO ACTION REQUIRED : Your BankAccount Closing Request XXXXXX has been submitted for approval.",
+    "content": "<html> <body> <table> <tr> <td> <p>Dear $createdBy</p> <p>Please find the BankAccount Closing Request details.</p> </td> </tr> <tr> <td bgcolor='lightblue' style='padding: 40px 30px 40px 30px;'> <table> <tr> <td>List of Approvers</td> <td>$approverUserName</td> </tr> <tr> <td>Reason for Close</td> <td>$requestorReason</td> </tr> </table> </td> </tr> <tr> <td bgcolor='#eaeaea' style='padding: 30px 30px 30px 30px;'> For more details please goto <a href='http://gsyw-gfits-ui.herokuapp.com/my-requests/account-closing-request/$id'>Banking Admin</a> </td> </tr> </table> </body> </html>",
+    "createdBy": "Anil",
+    "createdOn": "2018-06-23T10:52:14.827+0000",
+    "updatedBy": "Anil",
+    "updatedOn": "2018-06-23T10:52:14.827+0000"
+  },
+  
